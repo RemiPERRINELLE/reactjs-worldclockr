@@ -173,11 +173,13 @@ export default function App() {
 
 
         {/* BOUTON DU THEME */}
-        <label className="inline-flex items-center cursor-pointer absolute right-3 top-5">
-          <input type="checkbox" value="" checked={!isLight} onChange={toggleLightMode} className="sr-only peer" />
-          <div className={`${isLight ? 'bg-white border-black after:bg-black after:border-black' : 'bg-dark border-white after:bg-white after:border-white'} relative w-11 h-6 peer-focus:outline-none ring-2 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-black`}></div>
-          <span className="ms-2 text-sm font-medium">{isLight ? <Moon /> : <Sun />}</span>
-        </label>
+        <div className="right-3 top-5 fixed z-100">
+          <label className="inline-flex items-center cursor-pointer">
+            <input type="checkbox" value="" checked={!isLight} onChange={toggleLightMode} className="sr-only peer" />
+            <div className={`${isLight ? 'bg-white border-black after:bg-black after:border-black' : 'bg-dark border-white after:bg-white after:border-white'} relative w-11 h-6 peer-focus:outline-none ring-2 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-black`}></div>
+            <span className="ms-2 text-sm font-medium">{isLight ? <Moon /> : <Sun />}</span>
+          </label>
+        </div>
 
 
 
